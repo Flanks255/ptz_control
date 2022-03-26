@@ -1,5 +1,9 @@
-Quick and simple PTZ camera control.
+A Quick and simple PTZ control script.
 
-Icons are Apache 2.0 license from google material icons.
+Written for a Marshall CV610-UB
 
-Requires Python 3, and the serial library.
+Works on the VISCA protocol over serial.
+
+Icons from Google material design icons. https://fonts.google.com/icons under Apache 2.0
+
+Requires Python 3, and the python serial library.
