@@ -171,6 +171,8 @@ class MainApplication:
         self.loadConfig()
         self.camera = Camera()
         self.main = MainWindow(self.root, self, self.camera)
+        self.root.attributes("-topmost", True)
+        self.root.resizable(0,0)
         self.root.mainloop()
     def loadConfig(self):
         if os.path.exists("config.json"):
