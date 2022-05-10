@@ -176,6 +176,14 @@ class Camera:
         ret = self.commandRead(bytearray([GET, VALUE, 0x00]))
         return ret[2] == 0x02
 
+    def setPower(self, power):
+        self.command(bytearray([SET, VALUE, 0x00, 0x02 if power else 0x03]))
+        return
+
+    def togglePower(self):
+        self.setPower(not self.getPower())
+        return
+
     def recallPreset(self, n):
         self.command(bytearray([SET, VALUE, 0x3F, 0x02, n]))
     def setPreset(self, n):

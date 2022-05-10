@@ -1,4 +1,3 @@
-from email.mime import image
 import tkinter as tk
 from tkinter import HORIZONTAL, ttk
 import serial
@@ -104,6 +103,8 @@ class JoystickPanel(tk.Frame):
         ttk.Button(self, image=self.homeImage, command=lambda: self.camera.home()).grid(column=1, row=1)
         self.stopImage = tk.PhotoImage(file="icons/outline_stop_circle_black_24dp.png")
         ttk.Button(self, image=self.stopImage, command=lambda: self.camera.stop()).grid(column=0, row=0)
+        self.powerImage = tk.PhotoImage(file="icons/bolt_FILL0_wght400_GRAD0_opsz48.png")
+        ttk.Button(self, image=self.powerImage, command=lambda: self.camera.togglePower()).grid(column=2, row=0)
         return
 
 class PresetFrame(tk.Frame):
